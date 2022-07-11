@@ -1,4 +1,4 @@
-# 一个基于vue3_ts实现的todolist小项目
+# 一个基于vue3_ts实现的todolist小项目。
 
 ## Project setup
 ```
