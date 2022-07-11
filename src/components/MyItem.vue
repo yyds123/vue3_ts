@@ -1,6 +1,6 @@
 <template>
   <li v-show="title">
-    <input type="checkbox" class="checkbox" :checked="done" @click="changeCheck(id)">
+    <input type="checkbox" class="checkbox" :checked="done" @click="changeChecked(id)">
     <span class="text">{{title}}</span>
     <div class="delete" @click="del(id)">
       <div></div>
@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import {defineComponent,ref,inject} from 'vue';
+import {defineComponent,ref} from 'vue';
 
 export default defineComponent({
   name: 'MyItem',
@@ -21,11 +21,11 @@ export default defineComponent({
     const del = (id:string) => {
         props.deleteItem(id)
     }
-    const changeCheck = (id:string) => {
+    const changeChecked = (id:string) => {
       props.changeCheck(id)
     }
     return {
-      title,done,id,del
+      title,done,id,del,changeChecked
     }
   }
 });

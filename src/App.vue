@@ -25,7 +25,7 @@ export default defineComponent({
     //读取localstorage
     const read = (key:string) => {
       const value = localStorage.getItem(key)
-      if (value&&value!=null&&value!=undefined){
+      if (value){
         return JSON.parse(value)
       }
       return []
